@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Main</title>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"
+            integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,900" rel="stylesheet">
+
+</head>
+<body>
+<div id="main_content">
+    <header class="clearfix">
+        <div class="burger_btn mob_l"></div>
+        <div class="logo_header"></div>
+        <div class="right_header">
+            <div class="lang_box">
+                en
+            </div>
+            <ul class="main_menu clearfix">
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Портфолио</a></li>
+                <li><a href="#">Маркетинг</a></li>
+                <li><a href="#">Наши проекты</a></li>
+                <li><a href="#">Блог</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </div>
+        <div class="palm_btn"></div>
+        <div class="mob_menu_box">
+            <ul class="mob_menu_self">
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Портфолио</a></li>
+                <li><a href="#">Маркетинг</a></li>
+                <li><a href="#">Наши проекты</a></li>
+                <li><a href="#">Блог</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="wrap">
+        <div class="main_blocks">
+            <div class="title_top_wrap clearfix">
+                <div class="head_title">наши
+                    работы
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="cont_bar_block">
+        <div class="cont_bar_item mail">
+
+
+            <div class="cont_item_txt">
+                office@brilliant.ua
+            </div>
+            <div class="cont_item_txt">
+                <a href="#">facebook</a>
+                <a href="#">instagram</a>
+            </div>
+        </div>
+        <div class="cont_bar_item phone">
+
+
+
+            <div class="cont_item_txt">
+                +38 (095) 336 88 84
+            </div>
+            <div class="cont_item_txt">
+                +38 (095) 829 59 41
+
+            </div>
+        </div>
+        <div class="cont_bar_item marker">
+
+
+            <div class="cont_item_txt">
+                Украина, Черновцы
+
+            </div>
+            <div class="cont_item_txt">
+                ул. Чкалова 20, офис 2
+            </div>
+        </div>
+
+        <div class="main_btn" id="contact_btn">
+                напешите нам
+        </div>
+    </div>
+
+    <div id="map">
+
+
+    </div>
+
+    <div class="overlay"></div>
+
+    <div id="modal_wrap">
+            <span class="close"></span>
+            <div class="modal_title">
+                Если остались вопросы, напишите нам
+            </div>
+            <div class="modal_content">
+
+                <form action="">
+                    <div class="input_wrap">
+                        <span class="input_label">Ваше имя</span>
+                        <input class="input_self" type="text" >
+                    </div>
+                    <div class="input_wrap">
+                        <span class="input_label">Ваше имя</span>
+                        <input  class="input_self" type="text" >
+                    </div>
+                    <div class="input_wrap">
+                        <span class="input_label">Текст сообщения</span>
+                        <input class="input_self" type="text" >
+                    </div>
+
+                </form>
+            </div>
+            <div class="main_btn">Отправить</div>
+
+    </div>
+
+</div>
+<footer class="footer">
+    <div class="wrap">
+        <div class="top_footer clearfix">
+            <div class="foot_logo_box">
+                <a class="footer_logo" href="#"></a>
+                <div class="dev_link_box"><span>© Все права защищены.</span> Brilliant IT, 2017</div>
+            </div>
+
+
+            <a class="foot_map" href="#">Карта сайта</a>
+            <ul class="footer_menu clearfix">
+                <li>
+                    <ul class="sub_menu">
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Портфолио</a></li>
+                        <li><a href="#">Маркетинг</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="sub_menu">
+                        <li><a href="#">Наши проекты </a></li>
+                        <li><a href="#">Контакты</a></li>
+                        <li><a href="#">Работать с нами</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="bot_footer clearfix">
+            <div class="dev_link_box"><span>© Все права защищены.</span> Brilliant IT, 2017</div>
+
+
+            <ul class="foot_soc">
+                <li><a href="#">instagram</a></li>
+                <li><a href="#">facebook</a></li>
+                <li><a href="#">google plus</a></li>
+
+            </ul>
+        </div>
+
+    </div>
+</footer>
+</body>
+<script>
+
+
+    function initMap() {
+        var uluru = {lat: 48.266801, lng: 25.954742};
+        var image = {
+            url: 'img/marker.png',
+            // This marker is 20 pixels wide by 32 pixels high.
+            size: new google.maps.Size(60, 100)
+        };
+        var style = [
+            {
+                "featureType": "administrative",
+                "elementType": "labels",
+                "stylers": [
+                    {
+                        "visibility": "simplified"
+                    }
+                ]
+            },
+            {
+                "featureType": "administrative",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                    {
+                        "color": "#c0c4c8"
+                    },
+                    {
+                        "visibility": "on"
+                    },
+                    {
+                        "lightness": "-27"
+                    }
+                ]
+            },
+            {
+                "featureType": "administrative.province",
+                "elementType": "all",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "landscape",
+                "elementType": "all",
+                "stylers": [
+                    {
+                        "visibility": "simplified"
+                    }
+                ]
+            },
+            {
+                "featureType": "landscape",
+                "elementType": "geometry.fill",
+                "stylers": [
+                    {
+                        "visibility": "simplified"
+                    },
+                    {
+                        "saturation": "100"
+                    },
+                    {
+                        "lightness": "15"
+                    }
+                ]
+            },
+            {
+                "featureType": "landscape.man_made",
+                "elementType": "geometry.fill",
+                "stylers": [
+                    {
+                        "saturation": "-68"
+                    },
+                    {
+                        "lightness": "67"
+                    },
+                    {
+                        "hue": "#0071ff"
+                    },
+                    {
+                        "weight": "1"
+                    },
+                    {
+                        "gamma": "0.63"
+                    }
+                ]
+            },
+            {
+                "featureType": "landscape.natural",
+                "elementType": "geometry.fill",
+                "stylers": [
+                    {
+                        "color": "#ffffff"
+                    }
+                ]
+            },
+            {
+                "featureType": "poi",
+                "elementType": "all",
+                "stylers": [
+                    {
+                        "visibility": "simplified"
+                    },
+                    {
+                        "saturation": "-29"
+                    },
+                    {
+                        "lightness": "36"
+                    }
+                ]
+            },
+            {
+                "featureType": "poi",
+                "elementType": "labels.icon",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "road",
+                "elementType": "all",
+                "stylers": [
+                    {
+                        "saturation": "100"
+                    },
+                    {
+                        "lightness": "0"
+                    },
+                    {
+                        "gamma": "1.00"
+                    },
+                    {
+                        "weight": "1.00"
+                    },
+                    {
+                        "visibility": "on"
+                    }
+                ]
+            },
+            {
+                "featureType": "road",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                    {
+                        "color": "#8bbbdf"
+                    },
+                    {
+                        "visibility": "on"
+                    }
+                ]
+            },
+            {
+                "featureType": "road.highway",
+                "elementType": "all",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "road.highway",
+                "elementType": "geometry.fill",
+                "stylers": [
+                    {
+                        "visibility": "on"
+                    },
+                    {
+                        "color": "#ffb349"
+                    }
+                ]
+            },
+            {
+                "featureType": "road.highway",
+                "elementType": "geometry.stroke",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "road.highway",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                    {
+                        "color": "#487cb0"
+                    }
+                ]
+            },
+            {
+                "featureType": "road.highway",
+                "elementType": "labels.text.stroke",
+                "stylers": [
+                    {
+                        "color": "#ffffff"
+                    },
+                    {
+                        "weight": "2.33"
+                    }
+                ]
+            },
+            {
+                "featureType": "road.arterial",
+                "elementType": "all",
+                "stylers": [
+                    {
+                        "saturation": "-16"
+                    },
+                    {
+                        "lightness": "-16"
+                    },
+                    {
+                        "weight": "1.00"
+                    }
+                ]
+            },
+            {
+                "featureType": "road.arterial",
+                "elementType": "labels.icon",
+                "stylers": [
+                    {
+                        "visibility": "on"
+                    }
+                ]
+            },
+            {
+                "featureType": "road.local",
+                "elementType": "all",
+                "stylers": [
+                    {
+                        "visibility": "simplified"
+                    },
+                    {
+                        "weight": "1.00"
+                    },
+                    {
+                        "color": "#ffffff"
+                    },
+                    {
+                        "lightness": "100"
+                    }
+                ]
+            },
+            {
+                "featureType": "road.local",
+                "elementType": "labels.text",
+                "stylers": [
+                    {
+                        "visibility": "on"
+                    },
+                    {
+                        "lightness": "-70"
+                    },
+                    {
+                        "weight": "0.01"
+                    },
+                    {
+                        "gamma": "1.00"
+                    }
+                ]
+            },
+            {
+                "featureType": "transit",
+                "elementType": "all",
+                "stylers": [
+                    {
+                        "visibility": "simplified"
+                    },
+                    {
+                        "saturation": "8"
+                    },
+                    {
+                        "lightness": "43"
+                    }
+                ]
+            },
+            {
+                "featureType": "transit",
+                "elementType": "labels.text",
+                "stylers": [
+                    {
+                        "visibility": "simplified"
+                    },
+                    {
+                        "saturation": "-100"
+                    },
+                    {
+                        "lightness": "-43"
+                    },
+                    {
+                        "color": "#82878b"
+                    }
+                ]
+            },
+            {
+                "featureType": "transit",
+                "elementType": "labels.icon",
+                "stylers": [
+                    {
+                        "visibility": "on"
+                    },
+                    {
+                        "saturation": "26"
+                    },
+                    {
+                        "lightness": "0"
+                    },
+                    {
+                        "gamma": "1.00"
+                    },
+                    {
+                        "weight": "1.06"
+                    }
+                ]
+            },
+            {
+                "featureType": "transit.station.airport",
+                "elementType": "labels.text",
+                "stylers": [
+                    {
+                        "visibility": "simplified"
+                    }
+                ]
+            },
+            {
+                "featureType": "transit.station.airport",
+                "elementType": "labels.icon",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "water",
+                "elementType": "all",
+                "stylers": [
+                    {
+                        "color": "#bad5ed"
+                    },
+                    {
+                        "visibility": "on"
+                    }
+                ]
+            }
+        ];
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 20,
+            center: uluru,
+            styles: style,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
+        var marker = new google.maps.Marker({
+            position: uluru,
+            map: map,
+            icon: image,
+            title: "Brilliant IT"
+        });
+        var contentString = '<div id="content">' +
+            '<div id="siteNotice">' +
+            '</div>' +
+            '<h1 id="firstHeading" class="firstHeading">Brilliant IT</h1>' +
+            '<div id="bodyContent">' +
+            '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+            'sandstone rock formation in the southern part of the ' +
+            'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) ' +
+            'south west of the nearest large town, Alice Springs; 450&#160;km ' +
+            '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major ' +
+            'features of the Uluru - Kata Tjuta National Park. Uluru is ' +
+            'sacred to the Pitjantjatjara and Yankunytjatjara, the ' +
+            'Aboriginal people of the area. It has many springs, waterholes, ' +
+            'rock caves and ancient paintings. Uluru is listed as a World ' +
+            'Heritage Site.</p>' +
+            '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">' +
+            'https://en.wikipedia.org/w/index.php?title=Uluru</a> ' +
+            '(last visited June 22, 2009).</p>' +
+            '</div>' +
+            '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString
+        });
+        marker.addListener('click', function () {
+            console.log("hello");
+            infowindow.open(map, marker);
+        })
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6pIeh8jtx0Qjlaf0iubbSAlzm8458aes&callback=initMap&language=en"
+        async defer></script>
+<script src="main.js"></script>
+</html>
