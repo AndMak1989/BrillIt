@@ -11,6 +11,20 @@
 
 </head>
 <body>
+<style>
+
+    .move .squer rect{
+        stroke-dashoffset:0;
+        -webkit-transition:all 2.5s ease;
+        -ms-transition:all 2.5s ease;
+        transition:all 2.5s ease;
+    }
+    .squer rect{
+        stroke-dashoffset:-3000 ;
+
+    }
+
+</style>
 <div id="main_content">
     <header class="clearfix">
         <div class="burger_btn mob_l"></div>
@@ -43,7 +57,12 @@
     <div class="wrap clearfix">
 
 
-            404!
+        <div style="width: 350px; height: 500px;">
+            <svg class="squer" width="95%" height="95%"  xmlns="http://www.w3.org/2000/svg" >
+                <rect  x="10" y="10" width="95%"  height="95%" stroke-dasharray="3000"  stroke-dashoffset="0"  stroke-width="8" stroke="rgba(184, 164, 114, 0.25)" fill="transparent" />
+            </svg>
+
+        </div>
 
         <div class="overlay"></div>
     </div>
@@ -91,6 +110,9 @@
         </div>
     </footer>
 </div>
+<script>
+    document.onclick = function () { document.querySelector('body').className = "move" }
+</script>
 </body>
 
 <script src="main.js"></script>
