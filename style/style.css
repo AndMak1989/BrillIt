@@ -66,6 +66,10 @@ button {
   font-family: 'ProxiRegular';
   src: url('fonts/ProximaNova-Regular.ttf') format('ttf'), url('fonts/ProximaNova-Regular.eot') format('eot'), url('fonts/ProximaNova-Regular.woff') format('woff');
 }
+@font-face {
+  font-family: 'House';
+  src: url('fonts/Houschka.ttf') format('ttf'), url('fonts/Houschka.ttf') format('ttf'), url('fonts/Houschka.ttf') format('ttf');
+}
 /******************************** start ************************************/
 body {
   font-family: 'ProxiRegular', sans-serif;
@@ -1861,6 +1865,7 @@ footer .dev_link_box {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
+  min-height: 100%;
   -webkit-box-shadow: 0px 10px 35px -4px #d8e1f1;
           box-shadow: 0px 10px 35px -4px #d8e1f1;
 }
@@ -1872,10 +1877,24 @@ footer .dev_link_box {
 .main_btn.case_btn {
   margin-bottom: 5%;
 }
+.error_code {
+  font-size: 460px;
+  color: #213e58;
+  line-height: 400px;
+  text-align: center;
+}
+.error_txt {
+  font-size: 30px;
+  text-align: center;
+}
 @media screen and (max-width: 1480px) {
   .circle {
     width: 13vw;
     height: 13vw;
+  }
+  .error_code {
+    font-size: 40vw;
+    line-height: 40vw;
   }
   .cont_bar_block {
     padding: 5% 2% 7%;
