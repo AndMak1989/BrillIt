@@ -283,6 +283,9 @@ header.open .mob_menu_box {
   visibility: visible;
   opacity: 1;
 }
+.case_content {
+  position: relative;
+}
 .main_page .logo_header {
   width: 105px;
   height: 55px;
@@ -1909,6 +1912,48 @@ footer .dev_link_box {
 .case_block .case_item_self:hover {
   color: #ffffff;
   background-color: #6f6de2;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.case_img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  right: 0;
+}
+.case_content_txt {
+  opacity: 0;
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+  -webkit-transition: transform 0.2s linear;
+  -webkit-transition: -webkit-transform 0.2s linear;
+  transition: -webkit-transform 0.2s linear;
+  -o-transition: transform 0.2s linear;
+  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+}
+.case_item:hover .case_content_txt {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: transform 0.3s ease-out;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  -o-transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+}
+.case_item:hover img {
+  opacity: 0;
+  -webkit-transition: opacity 0.05s linear;
+  -o-transition: opacity 0.05s linear;
+  transition: opacity 0.05s linear;
 }
 .case_content {
   font-size: 21px;
