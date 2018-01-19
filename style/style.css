@@ -235,8 +235,53 @@ header.open .mob_menu_box {
 }
 .lang_box {
   float: right;
-  margin-top: 5px;
   color: #6f6de2;
+  position: relative;
+  width: 30px;
+  text-align: center;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.lang_list_box li:hover {
+  color: #105695;
+}
+.active_lang {
+  cursor: pointer;
+  padding: 0 5px 2px 5px;
+  position: relative;
+}
+.lang_list_box {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+}
+.active_lang:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 1px;
+  margin: 0 auto;
+  background-color: #fff;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.lang_list_box li {
+  text-align: center;
+  display: block;
+  padding: 5px;
+  cursor: pointer;
+}
+.lang_box .lang_list_box {
+  visibility: hidden;
+  opacity: 0;
+}
+.lang_box.drop .lang_list_box {
+  visibility: visible;
+  opacity: 1;
 }
 .main_page .logo_header {
   width: 105px;
@@ -1846,6 +1891,7 @@ footer .dev_link_box {
   padding: 0px 15px 10px;
   height: 80px;
   margin-top: 40px;
+  resize: none;
 }
 .input_wrap input:focus,
 .input_wrap textarea:focus {

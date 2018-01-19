@@ -1,4 +1,20 @@
 jQuery(document).ready(function () {
+    
+    
+    
+    jQuery('.active_lang').click(function (e) {
+        jQuery('.lang_box').toggleClass('drop');
+    });
+
+    jQuery('.lang_list_box').children('li').click(function (e) {
+       var
+           clickLang =  jQuery(this).html(),
+           actLang =  jQuery('.active_lang').html();
+       if(clickLang.trim() !== actLang.trim() ){
+           jQuery('.active_lang').html(clickLang);
+           jQuery('.lang_box').removeClass('drop');
+       }
+    });
 
     (function () {
         jQuery('.caption1').each(function () {
