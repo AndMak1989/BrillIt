@@ -2054,6 +2054,10 @@ footer .dev_link_box {
   -ms-transition: transform 0.1s linear;
   transition: transform 0.1s linear;
 }
+.text_box .input_label{
+  bottom: auto;
+  top:0;
+}
 
 .input_wrap.active .input_label {
   -webkit-transform: translate3d(0, -100%, 0);
@@ -2066,7 +2070,7 @@ footer .dev_link_box {
   transition: transform 0.2s linear;
 }
 
-.input_wrap input {
+.input_wrap input , .input_wrap textarea {
   display: block;
   width: 100%;
   padding: 25px 15px 10px;
@@ -2080,8 +2084,14 @@ footer .dev_link_box {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+.modal_content  .input_wrap textarea{
+  padding: 0px 15px 10px;
+  height: 80px;
+  margin-top:40px;
+}
 
-.input_wrap input:focus {
+
+.input_wrap input:focus ,.input_wrap textarea:focus {
   outline: none;
 }
 
