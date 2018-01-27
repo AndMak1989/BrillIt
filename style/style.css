@@ -1911,22 +1911,17 @@ footer .dev_link_box {
 }
 .case_block .case_item_self:hover {
   color: #ffffff;
-  background-color: #6f6de2;
   -webkit-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 .case_img {
-  position: absolute;
+  position: relative;
   left: 0;
-  top: 50%;
   max-width: 100%;
   width: 100%;
   margin: 0 auto;
   right: 0;
-  -webkit-transform: translate3d(0, -50%, 0);
-  -ms-transform: translate3d(0, -50%, 0);
-  transform: translate3d(0, -50%, 0);
 }
 .case_content_txt {
   opacity: 0;
@@ -1939,6 +1934,7 @@ footer .dev_link_box {
   -o-transition: transform 0.2s linear;
   transition: transform 0.2s linear;
   transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+  position: absolute;
 }
 .case_item:hover .case_content_txt {
   opacity: 1;
@@ -1970,14 +1966,22 @@ footer .dev_link_box {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
-  min-height: 100%;
+}
+.shadow_wrap {
+  height: 100%;
   -webkit-box-shadow: 0px 10px 35px -4px #d8e1f1;
           box-shadow: 0px 10px 35px -4px #d8e1f1;
+}
+.case_block .shadow_wrap:hover {
+  background-color: #6f6de2;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 .case_block .case_title {
   font-size: 40px;
   font-family: "ProxiExtra", sans-serif;
-  margin-bottom: 5%;
+  margin-bottom: 10%;
 }
 .main_btn.case_btn {
   margin-bottom: 5%;
